@@ -92,9 +92,33 @@ Each script is independent run only the modules relevant to what you're studying
 See [`assets/diagrams/architecture.md`](assets/diagrams/architecture.md) for the lab network layout (renders directly on GitHub via Mermaid).
 
 ## Verification Philosophy
-
+For the sake of actually seeing what sysadmins are dealing with, I put a real scenario where some checks pass and some fail — needing hands-on troubleshooting from the sysadmin to resolve.
 ```bash
-sudo ./scripts/verify-all.sh
+sudo ./scripts/verify-all.sh 
+== Users & Groups ==
+[PASS] user devops exists
+[PASS] group sysadmins exists
+== Storage ==
+[FAIL] vg_data volume group exists
+[FAIL] /app is mounted
+== SELinux ==
+[PASS] SELinux is enforcing
+== firewalld ==
+[PASS] firewalld is active
+[PASS] http service is open
+== SSH ==
+[PASS] sshd is active
+[FAIL] PasswordAuthentication disabled
+== Docker ==
+[FAIL] docker service is active
+== Security Hardening ==
+[PASS] auditd is active
+[FAIL] fail2ban is active
+
+================================
+ Passed: 7   Failed: 5
+================================
+
 ```
 Checks service states, firewall rules, SELinux mode, LVM layout, SSH config, Docker, auditd, and fail2ban against expected values  exiting non-zero on any drift.
 
