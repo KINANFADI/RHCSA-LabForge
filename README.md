@@ -91,15 +91,6 @@ Each script is independent run only the modules relevant to what you're studying
 
 See [`assets/diagrams/architecture.md`](assets/diagrams/architecture.md) for the lab network layout (renders directly on GitHub via Mermaid).
 
-## Screenshots & Demo Videos
-
-- **Screenshots** live in `assets/images/` and are embedded directly in each `docs/*.md` file.
-- **Videos are not committed to the repo**  git handles large binaries poorly. Instead:
-  1. Record terminal sessions with [asciinema](https://asciinema.org/)  tiny file, playable embed.
-  2. Upload full screen recordings to YouTube (unlisted is fine) and link them.
-  3. Drag an `.mp4` directly into a README while editing it on github.com  GitHub auto-uploads it to its CDN and gives you a working embed link.
-  See [`media/README.md`](media/README.md) for exact conventions.
-
 ## Verification Philosophy
 
 ```bash
