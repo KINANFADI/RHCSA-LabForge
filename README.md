@@ -13,7 +13,7 @@
 
 ---
 
-## 🎯 Why This Project Exists
+## Why This Project Exists
 
 Certifications prove you passed an exam. This repo proves you can **actually do the job**:
 - Every RHCSA objective + overlapping Linux+ and Security+ topics mapped to a real, working implementation
@@ -22,7 +22,7 @@ Certifications prove you passed an exam. This repo proves you can **actually do 
 - A Docker module covering images, volumes, networking, and container security — core Linux+ and real-world DevOps material
 - Verification scripts that prove each configuration actually works
 
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```
 RHCSA-LabForge/
@@ -54,7 +54,7 @@ RHCSA-LabForge/
     └── README.md              # how demo videos/asciinema recordings are linked (not committed)
 ```
 
-## 📚 Topics Covered
+## Topics Covered
 
 | # | Topic | Certifications | Script | Doc |
 |---|---|---|---|---|
@@ -69,7 +69,7 @@ RHCSA-LabForge/
 | 9 | Docker: images, volumes, networking, security | Linux+ | [`scripts/09`](scripts/09-docker-basics.sh) | [docs/09](docs/09-docker-fundamentals.md) |
 | 10 | Security hardening: AAA, crypto, auditd, fail2ban | Security+ | [`scripts/10`](scripts/10-security-hardening.sh) | [docs/10](docs/10-security-hardening.md) |
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 git clone https://github.com/<your-username>/RHCSA-LabForge.git
@@ -88,11 +88,11 @@ sudo ./verify-all.sh
 
 Each script is independent — run only the modules relevant to what you're studying.
 
-## 🖥️ Architecture
+## Architecture
 
 See [`assets/diagrams/architecture.md`](assets/diagrams/architecture.md) for the lab network layout (renders directly on GitHub via Mermaid).
 
-## 📸 Screenshots & 🎥 Demo Videos
+## Screenshots & Demo Videos
 
 - **Screenshots** live in `assets/images/` and are embedded directly in each `docs/*.md` file.
 - **Videos are not committed to the repo** — git handles large binaries poorly. Instead:
@@ -101,13 +101,13 @@ See [`assets/diagrams/architecture.md`](assets/diagrams/architecture.md) for the
   3. Drag an `.mp4` directly into a README while editing it on github.com — GitHub auto-uploads it to its CDN and gives you a working embed link.
   See [`media/README.md`](media/README.md) for exact conventions.
 
-## ✅ Verification Philosophy
+## Verification Philosophy
 
 ```bash
 sudo ./scripts/verify-all.sh
 ```
 Checks service states, firewall rules, SELinux mode, LVM layout, SSH config, Docker, auditd, and fail2ban against expected values — exiting non-zero on any drift.
 
-## 📄 License
+## License
 
 MIT — see [`LICENSE`](LICENSE). Use this as a template for your own certification portfolio.
